@@ -18,5 +18,5 @@
 
 document.addEventListener("turbolinks:load", function() {
   tinymce.remove();
-  tinymce.init({ selector:'textarea' });
+  tinymce.init({ selector:'textarea#post_body' });
 })
