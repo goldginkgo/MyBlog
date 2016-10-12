@@ -17,7 +17,7 @@
             <%= link_to 'My Posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
           </li>
           <li class="list-group-item">
-            <%= link_to 'Log out', destroy_author_session_path, method: :delete, class: "nav-link #{yield(:author)}" %>
+            <%= link_to 'Log out', destroy_author_session_path, method: :delete, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
@@ -48,7 +48,7 @@
           <%= link_to 'My Posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Log out', destroy_author_session_path, method: :delete, class: "nav-link #{yield(:author)}" %>
+          <%= link_to 'Log out', destroy_author_session_path, method: :delete, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
