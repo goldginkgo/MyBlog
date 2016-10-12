@@ -2,14 +2,14 @@ Rails.application.routes.draw do
   devise_for :authors
   root 'blog/posts#index'
 
-  namespace :author do
+  namespace :authors do
     resources :posts
   end
 
   scope '/blog' do
-    get 'about'      => 'blog/pages#about', as: :about
-    get 'contact'    => 'blog/pages#contact', as: :contact
-    get 'posts'      => 'blog/posts#index', as: :posts
+    get 'about'     => 'blog/pages#about', as: :about
+    get 'contact'   => 'blog/pages#contact', as: :contact
+    get 'posts'     => 'blog/posts#index', as: :posts
     get 'posts/:id' => 'blog/posts#show', as: :post
   end
 
